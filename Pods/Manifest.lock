@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.4.3)
+  - IQKeyboardManager (6.5.6)
+  - Kingfisher (7.0.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
+  - ReachabilitySwift (4.3.1)
+  - UIScrollView-InfiniteScrollSwift (0.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - IQKeyboardManager
+  - Kingfisher
+  - NVActivityIndicatorView
+  - ReachabilitySwift (~> 4.3.1)
+  - UIScrollView-InfiniteScrollSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - Kingfisher
+    - NVActivityIndicatorView
+    - ReachabilitySwift
+    - UIScrollView-InfiniteScrollSwift
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  UIScrollView-InfiniteScrollSwift: 195fcdc5c4c13555bd71e473fd11a4b88a0547d8
+
+PODFILE CHECKSUM: f57cfe346d58f570e94a1dcecd660e8a24c4bf36
+
+COCOAPODS: 1.11.3
