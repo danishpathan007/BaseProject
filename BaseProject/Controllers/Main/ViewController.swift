@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let apiManager = APIManager.shared()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+            self.apiManager.call(type: EndpointItem.login) { (_: LoginModel?, error) in
+                
+            }
     }
     
 

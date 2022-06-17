@@ -19,15 +19,20 @@ class AlertMessage {
     }
 }
 
+
+/*
+ Error object is a class which we will use for parsing network errors. You’ll define the structure of the object with backend developers.
+ */
 class ErrorObject: Codable {
     let success: Bool
     let message: String
     let status: Int?
-    let offset:String
 }
 
+/*
+ EndpointType is a protocol which defines all values that we need to form URL request. When formed we will pass it to our API manager. Because HTTPMethod, HTTPHeaders, and ParameterEncoding are objects from Alamofire library, we need to import it.
+ */
 protocol EndPointType {
-    // MARK: - Vars & Lets -
     var baseURL: String { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }
@@ -37,13 +42,18 @@ protocol EndPointType {
     var version: String { get }
 }
 
+/*
+ NetworkEnvironment is another enum object which will define a set of environments on a server side.
+ */
 enum NetworkEnvironment {
     case dev
     case production
     case stage
-
 }
 
+/*
+ EndpointItem is an enum object which implements EndpointType protocol. For each request on a server side, we will add new value to EndpointItem.
+ */
 enum EndpointItem {
     // MARK: - User actions apis -
     case profile
@@ -146,6 +156,9 @@ class APIManager {
         return apiManager
     }()
     
+    private let noInternetView = Bundle.main.loadNibNamed("NoInternetView", owner:nil, options:nil)![0] as! NoInternetView
+
+    
     // MARK: - Accessors -
     
     class func shared() -> APIManager {
@@ -157,19 +170,28 @@ class APIManager {
     private init(sessionManager: Session) {
         self.sessionManager = sessionManager
     }
+    
+    /*
+     We are using generic argument T where T is Codable. T will inform APIManager about what kind of data we are fetching and what kind of object we want the manager to return. T can be any object or, an array of objects, which implements Decodable and Encodable protocols. After setting T, if needed, we can add request parameters.
 
+     If the request is successful, we’ll get a predefined object. If not we will initialize the error object and display it using AlertMessage.
+     */
     
     func call<T>(type: EndPointType, params: Parameters? = nil,isLoaderHidden:Bool = false, handler: @escaping (T?, _ error: AlertMessage?)->()) where T: Codable {
+        
+        if !Reachability.isConnectedToNetwork(){
+                DispatchQueue.main.async{
+                    self.noInternetView.frame = CGRect(x: 0, y: 0, width: (UIApplication.shared.topMostViewController()?.view?.frame.width ?? 200), height: (UIApplication.shared.topMostViewController()?.view?.frame.height ?? 500))
+                    UIApplication.shared.topMostViewController()?.view.addSubview(self.noInternetView)
+                }
+            return
+        }
         
         /*
          Show Loader
          */
         if !isLoaderHidden {
             Loader.sharedInstance.startIndicatingActivity()
-        }
-        
-        if !Reachability.isConnectedToNetwork(){
-            return
         }
         
         Logger.log("URL : \(type.url)")

@@ -55,6 +55,10 @@
 		1CBD55D0285528EF009B5D1A /* CommonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55CF285528EE009B5D1A /* CommonUtilities.swift */; };
 		1CBD55D328552A9E009B5D1A /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55D228552A9E009B5D1A /* UserDefaultManager.swift */; };
 		1CBD55D828552BB9009B5D1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55D728552BB9009B5D1A /* ViewController.swift */; };
+		1CBD55DC2855A1CF009B5D1A /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55DA2855A1CF009B5D1A /* NoInternetView.swift */; };
+		1CBD55DD2855A1CF009B5D1A /* NoInternetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBD55DB2855A1CF009B5D1A /* NoInternetView.xib */; };
+		1CBD55DF2855A3BB009B5D1A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55DE2855A3BB009B5D1A /* UIView+Extension.swift */; };
+		1CBD55E12855A54B009B5D1A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBD55E02855A54B009B5D1A /* LoginViewModel.swift */; };
 		432ED8F3881F66FC93A3D1A6 /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AE5910EEB81A7B63B90FC2 /* Pods_BaseProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +113,10 @@
 		1CBD55CF285528EE009B5D1A /* CommonUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtilities.swift; sourceTree = "<group>"; };
 		1CBD55D228552A9E009B5D1A /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		1CBD55D728552BB9009B5D1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CBD55DA2855A1CF009B5D1A /* NoInternetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
+		1CBD55DB2855A1CF009B5D1A /* NoInternetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoInternetView.xib; sourceTree = "<group>"; };
+		1CBD55DE2855A3BB009B5D1A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1CBD55E02855A54B009B5D1A /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		22AE5910EEB81A7B63B90FC2 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45AD2D7EAB46F397E187A726 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
 		BA4AEE979C2C140691BFCA71 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +184,7 @@
 		1CBD556428550DCE009B5D1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1CBD55D92855A1BF009B5D1A /* NoInternet */,
 				1CBD558A28551367009B5D1A /* CollectionViewCells */,
 				1CBD558928551349009B5D1A /* TableViewCells */,
 				1CBD558528551303009B5D1A /* Common */,
@@ -243,6 +252,7 @@
 				1CBD557128551039009B5D1A /* UITableViewExtension.swift */,
 				1CBD556E28551039009B5D1A /* UIViewController+Extension.swift */,
 				1CBD557328551039009B5D1A /* UIWindow+Extension.swift */,
+				1CBD55DE2855A3BB009B5D1A /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +352,7 @@
 				1C512C0128550C35008E88DB /* AppDelegate.swift */,
 				1C512C0328550C35008E88DB /* SceneDelegate.swift */,
 				1CBD55D728552BB9009B5D1A /* ViewController.swift */,
+				1CBD55E02855A54B009B5D1A /* LoginViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -414,6 +425,15 @@
 				1CBD55D228552A9E009B5D1A /* UserDefaultManager.swift */,
 			);
 			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		1CBD55D92855A1BF009B5D1A /* NoInternet */ = {
+			isa = PBXGroup;
+			children = (
+				1CBD55DA2855A1CF009B5D1A /* NoInternetView.swift */,
+				1CBD55DB2855A1CF009B5D1A /* NoInternetView.xib */,
+			);
+			path = NoInternet;
 			sourceTree = "<group>";
 		};
 		C5A3CC09B287738DEA93A032 /* Pods */ = {
@@ -493,6 +513,7 @@
 				1CBD55B5285520FD009B5D1A /* Roboto-Light.ttf in Resources */,
 				1CBD55BC285520FD009B5D1A /* Roboto-Bold.ttf in Resources */,
 				1C512C0E28550C38008E88DB /* LaunchScreen.storyboard in Resources */,
+				1CBD55DD2855A1CF009B5D1A /* NoInternetView.xib in Resources */,
 				1CBD55C82855269F009B5D1A /* OnBoarding.storyboard in Resources */,
 				1CBD55BD285520FD009B5D1A /* Roboto-Thin.ttf in Resources */,
 				1CBD55B8285520FD009B5D1A /* Roboto-Italic.ttf in Resources */,
@@ -570,17 +591,20 @@
 				1CBD557B285510A2009B5D1A /* APIManager.swift in Sources */,
 				1C512C0228550C35008E88DB /* AppDelegate.swift in Sources */,
 				1CBD55802855113F009B5D1A /* NetworkConnectivity.swift in Sources */,
+				1CBD55DC2855A1CF009B5D1A /* NoInternetView.swift in Sources */,
 				1CBD55CD28552766009B5D1A /* OnBoardingCollectionViewCell.swift in Sources */,
 				1CBD55C028552167009B5D1A /* MKRImagePicker.swift in Sources */,
 				1CBD557728551039009B5D1A /* UITableViewExtension.swift in Sources */,
 				1CBD559E28551F94009B5D1A /* Notification+Extension.swift in Sources */,
 				1CBD559B28551F94009B5D1A /* String+Extension.swift in Sources */,
+				1CBD55E12855A54B009B5D1A /* LoginViewModel.swift in Sources */,
 				1CBD55D0285528EF009B5D1A /* CommonUtilities.swift in Sources */,
 				1CBD55D828552BB9009B5D1A /* ViewController.swift in Sources */,
 				1CBD558828551336009B5D1A /* ClosureButton.swift in Sources */,
 				1CBD559D28551F94009B5D1A /* UIButton+Extension.swift in Sources */,
 				1CBD557E28551111009B5D1A /* Logger.swift in Sources */,
 				1CBD557528551039009B5D1A /* UILabel+Extension.swift in Sources */,
+				1CBD55DF2855A3BB009B5D1A /* UIView+Extension.swift in Sources */,
 				1CBD5584285511E9009B5D1A /* CustomInfiniteIndicator.swift in Sources */,
 				1C512C0428550C35008E88DB /* SceneDelegate.swift in Sources */,
 				1CBD557428551039009B5D1A /* UIViewController+Extension.swift in Sources */,

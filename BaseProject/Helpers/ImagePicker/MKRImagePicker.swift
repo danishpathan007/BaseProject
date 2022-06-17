@@ -98,7 +98,7 @@ class MKRImagePicker:NSObject{
         let status = PHPhotoLibrary.authorizationStatus()
         switch status {
         case .authorized:
-            openImagePickerHandler(sourceType: .savedPhotosAlbum, controller: controller)
+            openImagePickerHandler(sourceType: .photoLibrary, controller: controller)
         case .denied, .restricted :
             self.showDeniedAlert(title: "Permission Denied", message: "Please grant photo library permissions in Settings to continue using this service", controller: controller)
             

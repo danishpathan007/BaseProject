@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="NoInternetView" id="iN0-l3-epB" customClass="NoInternetView" customModule="BaseProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-dY-eJM">
+                    <rect key="frame" x="0.0" y="44" width="428" height="882"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternet" translatesAutoresizingMaskIntoConstraints="NO" id="Ml8-3N-Ug1">
+                            <rect key="frame" x="53.666666666666657" y="50" width="321" height="441"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ0-e5-tnR">
+                            <rect key="frame" x="30" y="521" width="368" height="84.666666666666629"/>
+                            <string key="text">We are not able to connect the internet, please 
+check the internet connection</string>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-K2-yvv">
+                            <rect key="frame" x="56" y="655.66666666666663" width="316" height="64"/>
+                            <color key="backgroundColor" red="0.23529411759999999" green="0.76862745099999996" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="316" id="7dD-xP-gl0"/>
+                                <constraint firstAttribute="height" constant="64" id="ldB-WE-7Py"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                            <state key="normal" title="Try Again">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                    <color key="value" red="0.23529411759999999" green="0.76862745099999996" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="32"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ml8-3N-Ug1" firstAttribute="width" secondItem="lEA-dY-eJM" secondAttribute="width" multiplier="75%" id="5LP-zV-lQp"/>
+                        <constraint firstItem="BQ0-e5-tnR" firstAttribute="top" secondItem="Ml8-3N-Ug1" secondAttribute="bottom" constant="30" id="Mr4-sk-ad2"/>
+                        <constraint firstAttribute="trailing" secondItem="BQ0-e5-tnR" secondAttribute="trailing" constant="30" id="OJC-4k-l3a"/>
+                        <constraint firstItem="S0d-K2-yvv" firstAttribute="top" secondItem="BQ0-e5-tnR" secondAttribute="bottom" constant="50" id="QMU-cn-Yhp"/>
+                        <constraint firstItem="S0d-K2-yvv" firstAttribute="centerX" secondItem="lEA-dY-eJM" secondAttribute="centerX" id="QqP-rf-EM7"/>
+                        <constraint firstItem="Ml8-3N-Ug1" firstAttribute="centerX" secondItem="lEA-dY-eJM" secondAttribute="centerX" id="Tc0-bP-l0q"/>
+                        <constraint firstItem="Ml8-3N-Ug1" firstAttribute="height" secondItem="lEA-dY-eJM" secondAttribute="height" multiplier="0.5" id="W5T-GF-yAX"/>
+                        <constraint firstItem="BQ0-e5-tnR" firstAttribute="centerX" secondItem="lEA-dY-eJM" secondAttribute="centerX" id="sHX-EC-UO7"/>
+                        <constraint firstItem="Ml8-3N-Ug1" firstAttribute="top" secondItem="lEA-dY-eJM" secondAttribute="top" constant="50" id="zq6-1L-SPf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lEA-dY-eJM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="GBO-pN-hMt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lEA-dY-eJM" secondAttribute="trailing" id="MQj-2l-s0b"/>
+                <constraint firstItem="lEA-dY-eJM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dKw-Z6-VMQ"/>
+                <constraint firstAttribute="bottom" secondItem="lEA-dY-eJM" secondAttribute="bottom" id="xQ2-Pl-zx3"/>
+            </constraints>
+            <point key="canvasLocation" x="131.77570093457942" y="87.473002159827217"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noInternet" width="686" height="515"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
